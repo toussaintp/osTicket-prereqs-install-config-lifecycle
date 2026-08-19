@@ -42,9 +42,7 @@ A. Create a Windows 10 Virtual Machine in Microsoft Azure.
 - Size: Standard D2s v3 2vcpus
 - Username and Password created during deployment
 
-<p>
-<img width="871" height="894" alt="Create a Windows 10 Virtual Machine in Microsoft Azure" src="https://github.com/user-attachments/assets/b8280aff-2202-4203-b437-f56972b9aa36" />
-</p>
+![Create a Windows 10 Virtual Machine in Microsoft Azure](screenshots/Create%20a%20Windows%2010%20Virtual%20Machine%20in%20Microsoft%20Azure.png)
 <p>
 
 B. After deployment, connect to the VM using Remote Desktop Protocol (RDP).

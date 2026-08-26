@@ -47,12 +47,10 @@ A. Create a Windows 10 Virtual Machine in Microsoft Azure.
 
 B. After deployment, connect to the VM using Remote Desktop Protocol (RDP).
 
-<p>
-<img width="931" height="756" alt="RDP to virtual machine" src="https://github.com/user-attachments/assets/d3bfa779-47a7-427a-a90a-7dddcf3d0bd8" />
-</p>
-<p>
 
+![RDP to virtual machine](screenshots/RDP-to-virtual-machine.png)
 </p>
+
 <br />
 
 
@@ -69,11 +67,10 @@ Enable:
 
 Click OK and allow Windows to install the required features.
 
-<p>
-<img width="621" height="713" alt="Install IIS" src="https://github.com/user-attachments/assets/b8588838-bcf4-41ef-ba04-f21a0d30d988" />
+
+![Install Internet Information Services](screenshots/Install-IIS.png)
 </p>
-<p>
-</p>
+
 <br />
 
 
@@ -92,28 +89,26 @@ These files include:
 - osTicket
 - PHP binaries
   
-  <p>
-<img width="657" height="570" alt="download osTicket installation file" src="https://github.com/user-attachments/assets/f8b4d76a-43f8-4300-9323-acfbdd67d36f" />
+
+![Download osTicket Installation File](screenshots/download-osTicket-installation-file.png)
 </p>
-<p>
-  
-</p>
+
 <br />
 
 
 Step 4: Install PHP Manager and URL Rewrite
 
 A. PHP Manager for IIS
-<p>
-<img width="861" height="682" alt="php manager installed" src="https://github.com/user-attachments/assets/a31e1773-ea2a-4368-88e1-24ffdecf74c4" />
+
+![PHP Manager Installed](screenshots/php-manager-installed.png)
 </p>
-<p>
+
 
 B. URL Rewrite Module
-<p>
-<img width="885" height="700" alt="rewrite installed" src="https://github.com/user-attachments/assets/f54f6307-2c94-4a61-9165-835caff97953" />
+
+![Rewrite Installed](screenshots/rewrite-installed.png)
 </p>
-<p>
+
 
 These components allow IIS to properly run PHP applications such as osTicket.
 </p>
@@ -127,19 +122,17 @@ Go to file explorer -> c: drive -> create folder PHP
 
 B. From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder
 
-<p>
-<img width="878" height="669" alt="extract php binaries" src="https://github.com/user-attachments/assets/d751ec31-0e35-4418-86fc-2323a6ff87e6" />
+![Extract PHP Binaries](screenshots/extract-php-binaries.png)
 </p>
-<p>
-</p>
+
 <br />
 
 Step 6: From the “osTicket-Installation-Files” folder, install VC_redist.x86.exe.
 
-<p>
-<img width="872" height="663" alt="visual c installed" src="https://github.com/user-attachments/assets/b588daf9-dc51-4070-a1e5-07a94711cd5e" />
+
+![Visual C Installed](screenshots/visual-c-installed.png)
 </p>
-<p>
+
 
 This provides required runtime libraries for PHP and other dependencies.
 </p>
@@ -148,25 +141,22 @@ This provides required runtime libraries for PHP and other dependencies.
 Step 7: Install PHP
 
 A. Open IIS Manager (open IIS as an Admin)
- <p>
-<img width="870" height="652" alt="php manager admin" src="https://github.com/user-attachments/assets/91e4dd43-8049-447f-9201-7e66ecbf6d67" />
+
+![PHP Manager Admin](screenshots/php-manager-admin.png)
 </p>
-<p>
 
 B. Using PHP Manager:
 
 - Register PHP (we're making the server aware of the existence of PHP the computer and tell it where it is ):
   double click php manager -> register new php -> click three dots -> find php-cgi in C:PHP
- <p>
-<img width="876" height="657" alt="php-cgi" src="https://github.com/user-attachments/assets/7d538cb8-f950-4ba1-a72e-da79768944bc" />
+  
+![PHP CGI](screenshots/php-cgi.png)
 </p>
-<p>
 
 C. Verify PHP is recognized by IIS: Reload IIS (Open IIS, Stop and Start the server) … click on osticket-vm (osticket) , right click stop , right click start
- <p>
-<img width="876" height="448" alt="reload server" src="https://github.com/user-attachments/assets/b5e71418-3fd9-46c6-a1e1-ea8c8446bbdf" />
+
+![Reload Server](screenshots/reload-server.png)
 </p>
-<p>
 
 Step 8: From the “osTicket-Installation-Files” folder, install mysql-5.5.62-win32.msi
   
@@ -179,11 +169,9 @@ During installation:
 
 Verify MySQL service is running after installation.
 
-<p>
-<img width="872" height="599" alt="install mysql " src="https://github.com/user-attachments/assets/82768547-e349-4132-bc5d-a0a58ac6ac8c" />
+![Install MySQL](screenshots/install-mysql.png)
 </p>
-<p>
-</p>
+
 <br />
 
 Step 9: Install osTicket v1.15.8
@@ -197,17 +185,16 @@ C:\inetpub\wwwroot\osTicket
 C. Rename:
 upload → osTicket
 
-<p>
-<img width="899" height="695" alt="upload to osTicket" src="https://github.com/user-attachments/assets/90232a39-536e-4ecb-9b2f-95fc3b840e88" />
+
+![Upload To osTicket](screenshots/upload-to-osTicket.png)
 </p>
-<p>
+
 
 D. Restart IIS.
 
-<p>
-<img width="876" height="448" alt="reload server" src="https://github.com/user-attachments/assets/b5e71418-3fd9-46c6-a1e1-ea8c8446bbdf" />
+![Reload Server](screenshots/reload-server.png)
 </p>
-<p>
+
 
 E. Go to sites -> Default -> osTicket
 On the far right, click “Browse *:80”

@@ -199,10 +199,9 @@ D. Restart IIS.
 E. Go to sites -> Default -> osTicket
 On the far right, click “Browse *:80”
 
-<p>
-<img width="950" height="761" alt="loading osTicket" src="https://github.com/user-attachments/assets/67ba264d-f527-4d3b-a94f-7740a29f5903" />
+
+![Loading osTicket](screenshots/loading-osTicket.png)
 </p>
-<p>
 
 Note that some extensions are not enabled
 
@@ -212,13 +211,10 @@ Enable: php_imap.dll -> Enable: php_intl.dll -> Enable: php_opcache.dll
 
 G. Refresh the osTicket site in your browser, observe the changes
 
-<p>
-<img width="950" height="764" alt="osTicket enabled" src="https://github.com/user-attachments/assets/339f83b0-9034-4345-a29d-15a7556e2bfd" />
+
+![osTicket Enabled](screenshots/osTicket-enabled.png)
 </p>
-<p>
-  
-</p>
-<br />
+
 
 Step 10: Rename: ost-config.php
 
@@ -231,10 +227,10 @@ Disable inheritance -> Remove All
 
 Add New Permissions -> select principal -> type Everyone -> check names -> All (full control etc) apply - ok
 
-<p>
-<img width="1421" height="736" alt="assign permissions" src="https://github.com/user-attachments/assets/3b413eb2-4f4a-46b4-b6f2-03e47038a776" />
+
+![Assign Permissions](screenshots/assign-permissions.png)
 </p>
-<p>
+
 
 Now OSticket has full control of the configuration file
 
@@ -246,53 +242,48 @@ Default email (your email)
 
 Admin user: email address different from default
 
-<p>
-<img width="803" height="933" alt="osticket continue set up" src="https://github.com/user-attachments/assets/f21f5c4d-1e60-47e3-9ade-4dcb4d05a632" />
+
+![Continue Set Up osTicket](screenshots/osticket-continue-set-up.png)
 </p>
-<p>
-</p>
-<br />
+
 
 Step 11: From the “osTicket-Installation-Files” folder, install HeidiSQL. (to make a connection to our database)
 
 A. Install HeidiSQL and launch 
 
-<p>
-<img width="693" height="543" alt="heidi installed" src="https://github.com/user-attachments/assets/8a82ab0d-40da-4d67-90d3-fe910335ef48" />
+
+![Heidi Installed](screenshots/heidi-installed.png)
 </p>
-<p>
+
 
 B. Connect to MySQL using:
 
 - Create a new session, root/ROOT
 - Connect to the session
   
-<p>
-<img width="791" height="602" alt="root ROOT" src="https://github.com/user-attachments/assets/f091fec1-5e10-4247-8521-dd6cc914964e" />
+
+![root ROOT](screenshots/root-ROOT.png)
 </p>
-<p>
+
 
 C. Create a database called “osTicket” (right click unamed -> create new -> database-> osTicket) you’ll see that it was created but thre is nothing in it
 
-<p>
-<img width="936" height="593" alt="osTicket database" src="https://github.com/user-attachments/assets/82c027e3-cc4f-45cb-b605-cada9e4e2266" />
+
+![osTicket Database](screenshots/osTicket-database.png)
 </p>
-<p>
+
 
 D. Verify successful database connection / finish setting up OS Ticket page 
 
-<p>
-<img width="648" height="460" alt="osTicket finish set up" src="https://github.com/user-attachments/assets/e599a27f-a1be-4018-8f62-60150127d484" />
-</p>
-<p>
 
-<p>
-<img width="806" height="646" alt="osTicket completed" src="https://github.com/user-attachments/assets/594e7c1a-085e-40e8-82c7-5b502f8f56d3" />
+![Finish osTicket set up](screenshots/osTicket-finish-set-up.png)
 </p>
-<p>
 
+
+
+![osTicket Completed](screenshots/osTicket-completed.png)
 </p>
-<br />
+
 
 <h2>Skills Demonstrated</h2>
 

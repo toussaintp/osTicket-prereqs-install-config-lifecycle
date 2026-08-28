@@ -32,7 +32,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 
-Step 1: Create an Azure Virtual Machine
+**Step 1: Create an Azure Virtual Machine**
   
 A. Create a Windows 10 Virtual Machine in Microsoft Azure.
 
@@ -54,7 +54,7 @@ B. After deployment, connect to the VM using Remote Desktop Protocol (RDP).
 <br />
 
 
-Step 2: Install IIS
+**Step 2: Install IIS**
 
 Open Control Panel → Programs → Turn Windows Features On or Off.
 
@@ -74,7 +74,7 @@ Click OK and allow Windows to install the required features.
 <br />
 
 
-Step 3: Download osTicket Installation Package
+**Step 3: Download osTicket Installation Package**
 
 Download the osTicket installation package and supporting files.
 https://drive.google.com/uc?export=download&id=1b3RBkXTLNGXbibeMuAynkfzdBC1NnqaD
@@ -96,7 +96,7 @@ These files include:
 <br />
 
 
-Step 4: Install PHP Manager and URL Rewrite
+**Step 4: Install PHP Manager and URL Rewrite**
 
 A. PHP Manager for IIS
 
@@ -114,7 +114,7 @@ These components allow IIS to properly run PHP applications such as osTicket.
 </p>
 <br />
 
-Step 5 - Extract php binaries
+**Step 5 - Extract php binaries**
 
 A. Create the directory C:\PHP
 
@@ -127,7 +127,7 @@ B. From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 (php-7.3.8
 
 <br />
 
-Step 6: From the “osTicket-Installation-Files” folder, install VC_redist.x86.exe.
+**Step 6: From the “osTicket-Installation-Files” folder, install VC_redist.x86.exe.**
 
 
 ![Visual C Installed](screenshots/visual-c-installed.png)
@@ -138,7 +138,7 @@ This provides required runtime libraries for PHP and other dependencies.
 </p>
 <br />
 
-Step 7: Install PHP
+**Step 7: Install PHP**
 
 A. Open IIS Manager (open IIS as an Admin)
 
@@ -158,7 +158,7 @@ C. Verify PHP is recognized by IIS: Reload IIS (Open IIS, Stop and Start the ser
 ![Reload Server](screenshots/reload-server.png)
 </p>
 
-Step 8: From the “osTicket-Installation-Files” folder, install mysql-5.5.62-win32.msi
+**Step 8: From the “osTicket-Installation-Files” folder, install mysql-5.5.62-win32.msi**
   
 During installation:
 
@@ -174,7 +174,7 @@ Verify MySQL service is running after installation.
 
 <br />
 
-Step 9: Install osTicket v1.15.8
+**Step 9: Install osTicket v1.15.8**
   
 A. From the “osTicket-Installation-Files” folder, unzip “osTicket-v1.15.8.zip” to the same folder  
 
@@ -216,7 +216,7 @@ G. Refresh the osTicket site in your browser, observe the changes
 </p>
 
 
-Step 10: Rename: ost-config.php
+**Step 10: Rename: ost-config.php**
 
 A. From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
 To: C:\inetpub\wwwroot\osTicket\include\ost-config.php
@@ -247,7 +247,7 @@ Admin user: email address different from default
 </p>
 
 
-Step 11: From the “osTicket-Installation-Files” folder, install HeidiSQL. (to make a connection to our database)
+**Step 11: From the “osTicket-Installation-Files” folder, install HeidiSQL. (to make a connection to our database)**
 
 A. Install HeidiSQL and launch 
 
@@ -329,94 +329,93 @@ This tutorial outlines the post-install configuration of the open-source help de
 
 <h2>Configuration Steps</h2>
 
-<p>
-Step 1: Acknowledge Agent Panel Vs Admin Pnael
+
+**Step 1: Acknowledge Agent Panel Vs Admin Pnael**
 </p>
 
 A. Log in as Admin/Analyst http://localhost/osTicket/scp/login.php 
 
 B. Agent Panel
-<p>
-<img width="926" height="388" alt="2 - Agent Panel" src="https://github.com/user-attachments/assets/26aa2891-603b-4aa8-a0c4-0d371ed24f61" />
+
+![Agent Panel](screenshots/2-Agent-Panel.png)
 </p>
 
 C. Admin Panel
-<p>
-<img width="914" height="366" alt="1 - admin panel " src="https://github.com/user-attachments/assets/fa40d2bc-d991-4da4-929d-a9bd9ff272c3" />
-</p>
-<br />
 
-<p>
-Step 2 Configure Roles (for grouping permissions)
+![Admin Panel](screenshots/1-admin-panel.png)
+</p>
+
+
+**Step 2 Configure Roles** (for grouping permissions)
   
 - Go to Admin Panel -> Agents -> Roles -> add new role -> Supreme Admin (check everything in permissions: tickets , tasks and knowledgeable)
 </p>
 
-<p>
-<img width="910" height="399" alt="3 - supreme admin" src="https://github.com/user-attachments/assets/ac64ca5f-70ef-4851-9ce3-778c0360968b" />
-</p>
-<br />
 
-<p>
-Step 3: Configure Departments (Ticket Visibility, Help Desk vs SysAdmins, vs Networking)
+![Supreme Admin](screenshots/3-supreme-admin.png)
+</p>
+
+
+
+**Step 3: Configure Departments** (Ticket Visibility, Help Desk vs SysAdmins, vs Networking)
   
 - Go to Admin Panel -> Agents -> Departments -> new department -> parent = top level department-> name = sysadmins 
 </p>
 
-<p>
-<img width="925" height="360" alt="4 - sysadmins dept" src="https://github.com/user-attachments/assets/612decb3-21a6-45f3-868b-6ad178e0af6f" />
-</p>
-<br />
 
-<p>
-Step 4: Configure Teams
+![Sys Admin Dept](screenshots/4-sysadmins-dept.png)
+</p>
+
+
+
+**Step 4: Configure Teams**
   
 - Go to Admin Panel -> Agents -> Teams (Pull Agents from different Departments) -> add new team -> name = online banking  
 </p>
 
-<p>
-<img width="918" height="312" alt="5 - online banking team" src="https://github.com/user-attachments/assets/4f474de5-90e8-4792-bc67-76c3bd0b3a00" />
-</p>
-<br />
 
-<p>
-Step 5: Allow anyone to create tickets
+![Online Banking Team](screenshots/5-online-banking-team.png)
+</p>
+
+
+
+**Step 5: Allow anyone to create tickets**
   
 - Go to Admin Panel -> Settings -> User Settings -> UNCHECK Registration Required: Require registration and login to create tickets (unregistered users can create tickets)
 </p>
 
-<p>
-<img width="881" height="620" alt="6 - allow everyone to create tickets" src="https://github.com/user-attachments/assets/fbd036e9-c0dd-4bcf-9067-7990517e1002" />
-</p>
-<br />
 
-<p>
-Step 6: Configure Agents (workers/help desk tech)
+![Allow Everyone To Create Tickets](screenshots/6-allow-everyone-to-create-tickets.png)
+</p>
+
+
+
+**Step 6: Configure Agents** (workers/help desk tech)
   
 - Go to Admin Panel -> Agents -> Add New
 - Jane doe, fake email (Dept: SysAdmins - supreme admin - online banking- set password (uncheck sent to agent and password required next login))
 - John doe, fake email (Dept: Support -  view only? - online banking- set password (uncheck sent to agent and password required next login)
 </p>
 
-<p>
-<img width="913" height="384" alt="7 - agents" src="https://github.com/user-attachments/assets/ca46fd13-584f-4eb0-802a-f0c0daeaf6f7" />
-</p>
-<br />
 
-<p>
-Step 7: Configure Users (customers)
+![Agents](screenshots/7-agents.png)
+</p>
+
+
+
+**Step 7: Configure Users** (customers)
   
 - Go to Agent Panel -> Users -> Add New
 - Karen (fake email address)
 </p>
 
-<p>
-<img width="920" height="371" alt="8 - user karen" src="https://github.com/user-attachments/assets/1e7bc656-721a-4316-8291-1486ba79bb36" />
-</p>
-<br />
 
-<p>
-Step 8: Configure SLA (how much time you have to handle a ticket and how to prioritize them)
+![User Karen](screenshots/8-user-karen.png)
+</p>
+
+
+
+**Step 8: Configure SLA** (how much time you have to handle a ticket and how to prioritize them)
   
 - Go to Admin Panel -> Manage -> SLA -> Add new
 - Sev-A (Grace Period: 1 hour, Schedule: 24/7)
@@ -424,13 +423,13 @@ Step 8: Configure SLA (how much time you have to handle a ticket and how to prio
 - Sev-C (Grace Period: 8 hours, Business Hours)
 </p>
 
-<p>
-<img width="914" height="439" alt="9 - SLA" src="https://github.com/user-attachments/assets/578e7eb1-9a42-46d6-b572-643fa11889d3" />
-</p>
-<br />
 
-<p>
-Step 9: Configure Help Topics (For when users create a ticket)
+![Service Level Agreement](screenshots/9-SLA.png)
+</p>
+
+
+
+**Step 9: Configure Help Topics** (For when users create a ticket)
   
 - Go to Admin Panel -> Manage -> Help Topics
 - Business Critical Outage / report a problem
@@ -440,10 +439,10 @@ Step 9: Configure Help Topics (For when users create a ticket)
 - Other / General Inquiry
 </p>
 
-<p>
-<img width="916" height="679" alt="10 - help topics" src="https://github.com/user-attachments/assets/9e6adfe6-cf1b-4abb-a07d-7289874961ce" />
+
+![Help Topics](screenshots/10-help-topics.png)
 </p>
-<br />
+
 
 <h2>Final Result</h2>
 
@@ -480,8 +479,8 @@ This tutorial outlines the lifecycle of a ticket from intake to resolution withi
 
 <h2>Lifecycle Stages</h2>
 
-<p>
-Step 1: Delete the maintenance department 
+
+**Step 1: Delete the maintenance department**
   
   - When you create tickets they gets automatically assigned to this department that gets installed alongside osTicket, but we've actually already created our own department 
   - Log in as admin: http://localhost/osTicket/scp/login.php 
@@ -492,8 +491,8 @@ Step 1: Delete the maintenance department
 </p>
 <br />
 
-<p>
-Step 2: Using end user osTicket create new ticket
+
+**Step 2: Using end user osTicket create new ticket**
 
   - create ticket as end user (karen): http://localhost/osTicket  
 </p>
@@ -502,8 +501,8 @@ Step 2: Using end user osTicket create new ticket
 </p>
 <br />
 
-<p>
-Step 3: As a Help Desk Agent (john), observe the ticket’s properties
+
+**Step 3: As a Help Desk Agent (john), observe the ticket’s properties**
 
   - Log in as Agent John: http://localhost/osTicket/scp/login.php
   - Observe that we can only view the ticket and leave an internal note
@@ -513,8 +512,8 @@ Step 3: As a Help Desk Agent (john), observe the ticket’s properties
 </p>
 <br />
 
-<p>
-Step 4: change Agent John's access level
+
+**Step 4: change Agent John's access level**
 
   - log in as admin: http://localhost/osTicket/scp/login.php
   - Go to admin panel -> agents -> John Doe -> access -> all access
@@ -524,8 +523,7 @@ Step 4: change Agent John's access level
 </p>
 <br />
 
-<p>
-Step 5: As a Help Desk Agent (john), triage the ticket
+**Step 5: As a Help Desk Agent (john), triage the ticket**
 
 - Based on communications with end user (karen)
 - Priority: emergency
@@ -533,7 +531,7 @@ Step 5: As a Help Desk Agent (john), triage the ticket
 - SLA: Sev - A 
 - Help topic: business critical outage
   
-  <p>
+
 <img width="901" height="851" alt="5 - triaging ticket" src="https://github.com/user-attachments/assets/87aef362-f3bf-4d6b-bc14-846e4bbe0be0" />
 </p>
 
@@ -543,30 +541,29 @@ Step 5: As a Help Desk Agent (john), triage the ticket
 - Notice John no longer has access to ticket once transfered to sysadmins
 </p>
 
-<p>
+
 <img width="912" height="391" alt="6 - john no longer access" src="https://github.com/user-attachments/assets/e581e66f-d7bb-467e-b480-9203c12655e0" />
 </p>
-<br />
 
-<p>
-Step 6: working the ticket to completion as Agent Jane (Admin panel)
+
+
+**Step 6: working the ticket to completion as Agent Jane (Admin panel)**
   
 - Log in as Jane and open ticket
 - Post reply: We accidentally restarted the online banking system backend server during business hours due to a configuration issue. Will check the settings and attempt to restart.
 - WOrk on solution
 - Post reply: server successfully restarted, online banking seems to be back up! Confirmed with Karen, closing ticket
- </p> 
-  <p>
+
 <img width="901" height="793" alt="7 - ticket solved" src="https://github.com/user-attachments/assets/ab53cca5-332d-46db-b5df-007209891929" />
 </p>
-</p>
+
 - Inform colleagues on Teams , slack etc
 - Update Status from open to resolved (if pending user's satisfaction) or closed if user's feedback was satisfactory  
-</p>
- <p>
+
+
 <img width="903" height="312" alt="8 - ticket resolved" src="https://github.com/user-attachments/assets/abe7ca6a-ce64-4ae6-a5e1-be6476c63dbd" />
 </p>
-<br />
+
 
 <h2>Skills Demonstrated</h2>
 

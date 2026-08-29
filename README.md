@@ -485,43 +485,38 @@ This tutorial outlines the lifecycle of a ticket from intake to resolution withi
   - When you create tickets they gets automatically assigned to this department that gets installed alongside osTicket, but we've actually already created our own department 
   - Log in as admin: http://localhost/osTicket/scp/login.php 
   - Go to agents -> departments ->check maintenance and delete it
+
+![Delete Maintenance Dept](screenshots/1-delete-maintenance-dept.png)
 </p>
-<p>
-<img width="915" height="393" alt="1 - delete maintenance dept" src="https://github.com/user-attachments/assets/5b664f93-efeb-448b-97aa-66f5a0af6d95" />
-</p>
-<br />
+
 
 
 **Step 2: Using end user osTicket create new ticket**
 
   - create ticket as end user (karen): http://localhost/osTicket  
+
+![Karen Ticket](screenshots/2-karen-ticket.png)
 </p>
-<p>
-<img width="802" height="721" alt="2 - karen ticket" src="https://github.com/user-attachments/assets/78cb7389-807c-4432-8e5a-1f93aab2fbcd" />
-</p>
-<br />
+
 
 
 **Step 3: As a Help Desk Agent (john), observe the ticket’s properties**
 
   - Log in as Agent John: http://localhost/osTicket/scp/login.php
   - Observe that we can only view the ticket and leave an internal note
+
+![John View Only](screenshots/3-john-view-only.png)
 </p>
-<p>
-<img width="781" height="777" alt="3 - john view only" src="https://github.com/user-attachments/assets/46b011c8-9cbf-44b1-98b0-9599387d8aea" />
-</p>
-<br />
+
 
 
 **Step 4: change Agent John's access level**
 
   - log in as admin: http://localhost/osTicket/scp/login.php
   - Go to admin panel -> agents -> John Doe -> access -> all access
+
+![John All Access](screenshots/4-john-all-access.png)
 </p>
-<p>
-<img width="815" height="581" alt="4 - john all access" src="https://github.com/user-attachments/assets/186cbc68-25ef-4f50-a65c-2cf29e56bcef" />
-</p>
-<br />
 
 **Step 5: As a Help Desk Agent (john), triage the ticket**
 
@@ -532,7 +527,8 @@ This tutorial outlines the lifecycle of a ticket from intake to resolution withi
 - Help topic: business critical outage
   
 
-<img width="901" height="851" alt="5 - triaging ticket" src="https://github.com/user-attachments/assets/87aef362-f3bf-4d6b-bc14-846e4bbe0be0" />
+
+![Triaging Ticket](screenshots/5-triaging-ticket.png)
 </p>
 
 - change Assigned To: jane doe
@@ -542,7 +538,7 @@ This tutorial outlines the lifecycle of a ticket from intake to resolution withi
 </p>
 
 
-<img width="912" height="391" alt="6 - john no longer access" src="https://github.com/user-attachments/assets/e581e66f-d7bb-467e-b480-9203c12655e0" />
+![John No Longer Access](screenshots/6-john-no-longer-access.png)
 </p>
 
 
@@ -554,14 +550,14 @@ This tutorial outlines the lifecycle of a ticket from intake to resolution withi
 - WOrk on solution
 - Post reply: server successfully restarted, online banking seems to be back up! Confirmed with Karen, closing ticket
 
-<img width="901" height="793" alt="7 - ticket solved" src="https://github.com/user-attachments/assets/ab53cca5-332d-46db-b5df-007209891929" />
+![Ticket Solved](screenshots/7-ticket-solved.png)
 </p>
 
 - Inform colleagues on Teams , slack etc
 - Update Status from open to resolved (if pending user's satisfaction) or closed if user's feedback was satisfactory  
 
 
-<img width="903" height="312" alt="8 - ticket resolved" src="https://github.com/user-attachments/assets/abe7ca6a-ce64-4ae6-a5e1-be6476c63dbd" />
+![Ticket Resolved](screenshots/8-ticket-resolved.png)
 </p>
 
 
